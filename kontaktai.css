@@ -1,0 +1,77 @@
+/*CONTACT atskiras psl*/
+
+@import url('../app/css/style.css');
+
+.contact {
+    padding-top: 110px;
+}
+
+.section-heading {
+    float: left;
+    margin-left: 60px;
+}
+.redafoto {
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+.contact .section-content {
+    justify-content: space-between;
+    margin-top: 230px;
+    margin-bottom: 30px;
+    max-width: 1120px;
+    width: calc(100% - 10px);
+}
+.contact-form {
+    margin-right: 25px;
+    margin-left:15px;
+    width: calc(73% - 20px);
+}
+.contact .section-content .contact-form .input-row input:last-child {
+    margin-right: 16.9px;
+}
+.contact .section-content .contact-form #contact button[type="submit"] {
+    border-radius: 10px;
+}
+
+
+.redafoto img {
+    border-radius: 10px;
+    width: calc(100% - 10px);
+}
+
+@media all and (max-width:900px) {
+    .section-content {
+        flex-direction: column;
+        width: calc(50% - 35px);
+    }
+
+    .contact .section-content {
+        margin: 35px auto;
+    
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact .redafoto {
+        margin: 35px auto;
+
+    }
+
+    .section-heading {
+        float: none;
+        margin-left: 0;
+
+    }
+
+    @media all and (max-width:650px) {
+        .section-content {
+            width: 100%;
+        }
+        .redafoto img {
+            margin-left: 30px;
+            width: calc(80% - 15px);
+        }
+    }
+
+}

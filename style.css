@@ -1,0 +1,747 @@
+:root {
+
+    --brown: #893939;
+    --white: #fff;
+    --black: #000;
+    --lightblack: #333333;
+    --grey: #d6d3d2;
+
+    --yellow: #f0d360;
+    --bordine: #893939;
+    --rusvahover: #968888;
+    --navsviesijuoda: #333333;
+    --navjuoda: #222222;
+    --phototitle: #4a4040ba;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration-line: none;
+    /*galerijoje nuimtas pabraukimas*/
+}
+
+html,
+body {
+    font-size: 12px;
+    /*nurodome font, o visur kutur taikome rem, nes tuomet pakeitus font-size: 15px visur kitui rem pasikeis pagal koficienta 15/16*/
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+}
+
+
+/*bendri aprašymai section container, h2, h3, p APRASYMAS*/
+.container {
+    /*yellow box aprašymas*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/*prie header parasyti z-index, tada ant header neuzeis turinys*/
+.section-heading {
+    text-align: center;
+    /*teksto centravimas*/
+    color: var(--black);
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    /*100/1000*/
+    text-transform: uppercase;
+}
+
+.section-heading h2:after {
+    content: "";
+    /*tuscia row*/
+    display: block;
+    width: 90px;
+    border-top: 4px solid var(--brown);
+    margin: 22px auto
+        /*centruoja turini*/
+
+}
+
+.container a,
+.container p,
+.container h3 {
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
+
+}
+
+.section-heading p {
+    max-width: 610px;
+    margin: 0 auto;
+    /*centruoja teskta po bruksnio*/
+    line-height: 1.625;
+}
+
+.section-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    /*plonas font tekstas google.font*/
+}
+
+.section-content .flex-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*NAV meniu APRASYMAS*/
+.site-header {
+    /*red box aprašymas*/
+    background-color: var(--lightblack);
+    position: fixed;
+    z-index: 2;
+    /*visas turinis scroll eis po header juosta*/
+    width: 100%;
+    display: block;
+
+}
+
+.site-header .container {
+    justify-content: space-between;
+    /*nustumia meniu į skirtingas puses*/
+    align-items: center;
+
+}
+
+.main-nav li {
+    list-style: none;
+    /*nuimti default li taskiukai*/
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    /*nunulintas nav meniu pabraukimas apacioje*/
+    text-transform: uppercase;
+    font-size: 1rem;
+    /*16px/16*/
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 10px 15px;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+    /*hover uzvedus pele ant nav patamses spalva*/
+    background-color: var(--brown);
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    color: var(--black);
+}
+
+.mobile-nav {
+    display: none;
+    /*jei matoma nav paslėpti*/
+}
+
+/*komercine APRASYMAS*/
+/*reklamine pavadinimo aprašymas*/
+.reklamine-pavadinimas {
+    background-color: var(--grey);
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 100px;
+    /*antro bloko teksto atstumas nuo nav pradžios*/
+}
+
+section>.container {
+    padding: 0.5px;
+    padding-right: 11px;
+}
+
+.reklamine-pavadinimas h1 {
+    font-size: 3.0rem;
+    /*55px/16=2.625 rem is photoshop px paimi*/
+    line-height: 1.1428;
+    /*teksto tarpai tarp eiluciu*/
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+
+/*prekių foto  APRASYMAS*/
+.prekes {
+    background-color: var(--grey);
+
+}
+
+.prekes>.flex-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prekiu-images {
+    width: calc(25% - 10px);
+    /* kad mazejant ekranui neliktu tarpu tarp foto.
+    dvi foto užima 25 proc. ir tarpas yra 10 px. tarp foto) */
+    margin: 25px auto;
+    /* palieka lygius tarpus tarp header,footer ir t.t.*/
+
+
+}
+
+.prekiu-images img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+
+}
+
+/*įmonių logotipų  APRASYMAS*/
+.klientai {
+    background-color: var(--white);
+}
+
+.klientu-logo {
+    text-align: center;
+    color: var(--black);
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+.klientu-logo h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.klientu-logo {
+    width: 100%;
+    margin: 25px auto;
+    /* palieka lygius tarpus tarp header,footer ir t.t.*/
+
+}
+
+.klientu-logo img {
+    margin: 0 50px;
+    width: 82px;
+    display: block;
+
+}
+
+.klientai h2 {
+    padding-top: 10px;
+    background-color: var(--white);
+}
+
+
+
+
+/*service*/
+.service {
+    background-color: var(--grey);
+}
+
+.service h2:after {
+    content: "";
+    /*tuscia row*/
+    display: block;
+    width: 90px;
+    border-top: 4px solid var(--brown);
+    margin: 22px auto
+}
+
+.paslaugos h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.paslaugos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 550px;
+}
+
+.paslauga-1,
+.paslauga-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.service-icon ion-icon {
+    color: var(--brown);
+    font-size: 120px;
+    border-radius: none;
+}
+
+.paslauga-1 ion-icon {
+    margin-right: 50px;
+}
+
+.paslauga-2 ion-icon {
+    margin-left: 50px;
+}
+
+.paslaugos ion-icon {
+    margin: 0 70px;
+}
+
+
+.paslaugos .testi {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    padding: 20px 5px 0;
+    position: relative;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--brown);
+    background-color: var(--white);
+}
+
+.paslauga-1 .testi:before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    left: -30px;
+    top: 40%;
+    border: 15px solid transparent;
+    border-right-color: var(--brown);
+    border-style: solid;
+
+}
+
+.paslauga-2 .testi:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    right: -30px;
+    top: 40%;
+    border: 15px solid transparent;
+    border-left-color: var(--brown);
+    border-style: solid;
+
+}
+
+.paslaugos .testi p {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--black);
+    margin-bottom: 30px;
+
+}
+
+.paslaugos span {
+    color: var(--black);
+    font-size: 13.5px;
+    font-weight: bold;
+}
+
+
+/*CONTACT*/
+/*formos aprašymas*/
+.contact {
+    background-color: var(--grey);
+}
+
+.contact .section-content {
+    margin-bottom: 2px;
+    /* sumazinti kontaktu tarpo po siusti. ateina is div.container section-content */
+}
+
+.contact-form form {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.contact .section-heading h2:after {
+    border-color: var(--brown);
+}
+
+.contact.section-heading p {
+    max-width: 780px;
+}
+
+.contact .section-content {
+    width: 80%;
+    max-width: 860px;
+    margin: 30px auto;
+}
+
+/*forma*/
+.contact .section-content .contact-form .input-row {
+    margin-bottom: 30px;
+}
+
+.contact .section-content .contact-form .input-row input {
+    padding: 20px 25px;
+    /*padding atstumai langelio viduje*/
+    background-color: var(--white);
+    border-radius: 5px;
+    border: none;
+    width: calc(50% - 18px);
+
+}
+
+.contact .section-content .contact-form .input-row input:first-child
+
+/*input:first-child tarpas tarp name ir email laukeliu*/
+    {
+    margin-right: 16px;
+}
+
+.contact .section-content .contact-form textarea {
+    background-color: var(--white);
+    border: none;
+    width: 98%;
+    border-radius: 5px;
+    padding: 20px 25px;
+
+}
+
+.contact .section-content .contact-form .input-row input::placeholder,
+.contact .section-content .contact-form textarea::placeholder {
+    color: var(--brown);
+
+}
+
+.contact .section-content .contact-form #contact button[type="submit"] {
+    background-color: var(--brown);
+    border: none;
+}
+
+.contact #contact button[type="submit"] {
+    color: var(--white);
+    margin: 20px auto 0;
+    display: block;
+    height: 40px;
+    width: 100px;
+
+}
+
+.section-content .contact-form #contact button[type="submit"]:hover {
+    background-color: var(--lightblack);
+    transition: 0.4s ease-in-out;
+
+}
+
+/* FOOTER */
+.site-footer {
+    color: var(--brown);
+}
+
+/* turini i skirtingas puses nuveda */
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.site-footer a {
+    color: var(--brown);
+    text-decoration: none;
+    margin-bottom: 10px;
+    float: left;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.site-footer p {
+    font-size: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+.site-footer a:hover {
+    color: var(--lightblack);
+}
+
+/*soc icon aprašymas*/
+.soc-icons a:hover {
+    color: var(--lightblack);
+}
+
+.soc-icons a {
+    color: var(--brown);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-top: 10px;
+    transition-duration: none;
+    float: right;
+    padding: 3px;
+    font-size: 20px;
+}
+
+/* MEDIA---------------------------------------------------------------*/
+
+/*paslaugos*/
+@media only screen and (max-width: 1024px) {
+
+    .paslauga-1,
+    .paslauga-2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+
+    /*nav meniu*/
+    @media all and (max-width:900px) {
+        .contact .section-content .contact-form textarea {
+            width: 97.5%;
+        }
+
+        .main-nav {
+            display: none;
+        }
+
+        .site-header .container {
+            display: block;
+
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .mobile-nav {
+            position: relative;
+            width: 100%;
+            display: block;
+        }
+
+        .mobile-nav li {
+            list-style: none;
+        }
+
+        /*nav vidinis list*/
+        .mobile-nav ul {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+        }
+
+        .mobile-nav a {
+            color: var(--lightblack);
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0 5px;
+            padding: 10px 10px;
+            display: block;
+
+        }
+
+        .mobile-nav a:hover,
+        .mobile-nav a:active {
+            background-color: var(--brown);
+            color: var(--white);
+            border-radius: 5px;
+        }
+
+        .mobile-nav a.icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            color: var(--white);
+        }
+
+
+            .reklamine-pavadinimas h1 {
+                font-size: 2.5rem;
+            }
+
+            .paslaugos .testi p {
+                font-size: 13.5px;
+            }
+
+            .paslaugos {
+                height: 570px;
+            }
+
+            .culture-1 span.right,
+            .culture-2 span.right,
+            .culture-2 span.left,
+            .culture-3 span.left {
+                width: 80px;
+            }
+        }
+
+
+        /*prekiu*/
+        .prekiu-images {
+            margin-top: 0;
+            margin-bottom: 0;
+            width: calc(50% - 0px);
+            padding: 20px;
+        }
+
+        .klientu-logo img {
+            margin: 0 auto;
+            /* palieka lygius tarpus tarp right/left */
+        }
+
+        .footer {
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 800px) {
+
+        .reklamine-pavadinimas h1 {
+            line-height: 1.225;
+        }
+
+        .paslaugos {
+            height: 650px;
+        }
+
+        .paslaugos .testi p {
+            font-size: 13.5px;
+        }
+
+        .paslaugos span {
+            font-size: 14px;
+        }
+
+
+        @media all and (max-width:650px) {
+
+            .atsiliepimai h2,
+            .klientai h2,
+            .paslaugos h2,
+            .contact h2 {
+                font-size: 25px !important;
+                letter-spacing: 0.05em !important;
+            }
+
+            .contact .section-content .contact-form textarea {
+                width: 95.5%;
+            }
+
+            .prekiu-images {
+                width: 100%;
+                margin: 0 5px;
+                margin-bottom: 5px;
+                padding: 5px 10px;
+            }
+
+            .prekiu-images img {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .susisiekite a {
+                width: calc(85% - 0px);
+            }
+
+            @media only screen and (max-width: 640px) {
+
+                .paslaugos .testi p {
+                    font-size: 12px;
+                    line-height: 1.625;
+                }
+
+                .paslaugos ion-icon {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+
+                .paslaugos {
+                    height: 860px;
+                }
+
+                .paslauga-1,
+                .paslauga-2 {
+                    flex-direction: column;
+                }
+
+                .paslauga-2 {
+                    flex-direction: column-reverse;
+                }
+
+                .paslauga-1 img {
+                    margin-right: 0;
+                }
+
+                .paslauga-2 img {
+                    margin-left: 0;
+                }
+
+                .paslauga-1 .testi:before,
+                .paslauga-2 .testi:after {
+                    top: -30px;
+                    left: 48%;
+                    border-bottom-color: var(--white);
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                }
+
+                .testi {
+                    margin-top: 40px;
+                }
+
+                .klientu-logo img {
+                    width: calc(85% - 0px);
+                    padding: 5px;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    .paslaugos {
+                        height: 890px;
+                    }
+                    section>.container {
+                        padding-left: 15px;
+                    }
+
+                    @media only screen and (max-width: 480px) {
+
+                        .paslaugos {
+                            height: 940px;
+                        }
+
+                        .paslaugos h2 {
+                            text-align: center;
+                        }
+
+                        @media only screen and (max-width: 360px) {
+
+                            .paslaugos {
+                                height: 1400px;
+                            }
+                        }
+
+                        @media only screen and (max-width: 320px) {
+
+
+                            .paslaugos {
+                                height: 1400px;
+                            }
+                        }
